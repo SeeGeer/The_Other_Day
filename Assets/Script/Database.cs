@@ -18,6 +18,7 @@ public class Database : MonoBehaviour
 
     public static bool GetRod = false;
     public static bool ThrownBall = false;
+    public static bool WaitForFish = false;
     public static bool HaveFish = false; // fish bites the hook
     public static bool FishArrive = false;
     public static bool PickFish = false;
