@@ -25,12 +25,8 @@ public class BendRod : MonoBehaviour {
             if(BendScript.angle < 20)
             {
                 BendScript.angle += 1;
-
             }
         }
-
-
-
 
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) //right hand first finger
         {
