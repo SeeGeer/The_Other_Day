@@ -22,6 +22,7 @@ public class PickUp : MonoBehaviour {
         
         if(other.name == "hand_left_renderPart_0")
         {
+            print("GetRod");
             Database.GetRod = true;
             Rod.SetActive(true);
             Destroy(OriginalRod, 0.1f);
