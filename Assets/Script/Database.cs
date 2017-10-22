@@ -15,6 +15,7 @@ public class Database : MonoBehaviour
 
 
     public static bool GetRod = false;
+    public static bool ThrownBall = false;
 
 
 }

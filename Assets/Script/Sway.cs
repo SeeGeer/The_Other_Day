@@ -32,8 +32,11 @@ public class Sway : MonoBehaviour
 
             if (!Thrown)
             {
-                if(Database.GetRod)
-                isThrown();
+                if (Database.GetRod)//already get the rod
+                {
+                    isThrown();//Throw the ball away
+                    Database.ThrownBall = true;
+                }
             }
             
              
