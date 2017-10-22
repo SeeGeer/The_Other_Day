@@ -25,6 +25,7 @@ public class Database : MonoBehaviour
     public static bool GiveFish = false;
 
     public static int FishCount = 0;
+    public static int BigFish = 2;
 
 
 }
