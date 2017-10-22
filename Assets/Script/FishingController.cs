@@ -15,13 +15,18 @@ public class FishingController : MonoBehaviour {
 
         if (Database.HaveFish && !Database.PickFish)
         {
-            OVRInput.SetControllerVibration(1, 20, OVRInput.Controller.LTouch);
+            OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
         }
 
         if(Database.PickFish)
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
 
         
+
+        if(Database.FishCount == 3)
+        {
+
+        }
 	}
 
 

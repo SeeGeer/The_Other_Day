@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4819391524707524}
   - component: {fileID: 95334704096382418}
   m_Layer: 0
-  m_Name: Small Fish
+  m_Name: Big Fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,12 +156,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4349526188560522}
   - component: {fileID: 33680789270247006}
-  - component: {fileID: 135346905925371374}
   - component: {fileID: 23154659335444194}
   - component: {fileID: 54336516579719988}
   - component: {fileID: 114749010065296934}
+  - component: {fileID: 65828539031606974}
   m_Layer: 0
-  m_Name: Mark
+  m_Name: BigFishMark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,7 @@ Transform:
   m_GameObject: {fileID: 1421349089327626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.39501226, y: 0.8012004, z: 0.23390758}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5.587245, y: 5.587244, z: 5.587244}
   m_Children:
   - {fileID: 4819391524707524}
   m_Father: {fileID: 0}
@@ -626,6 +626,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65828539031606974
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1421349089327626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1670178, y: 0.3662953, z: 0.789688}
+  m_Center: {x: 0.009963748, y: 0.017935105, z: -0.027370512}
 --- !u!95 &95334704096382418
 Animator:
   serializedVersion: 3
@@ -656,18 +668,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fish: {fileID: 1421349089327626}
   speed: 1
---- !u!135 &135346905925371374
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1421349089327626}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137243919630173474
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
