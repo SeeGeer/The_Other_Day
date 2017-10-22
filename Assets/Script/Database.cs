@@ -12,9 +12,14 @@ public class Database : MonoBehaviour
     public static bool isRunning = false;
     // Sijie
 
+    // Xuefan
+    public static bool isPull = false;
+    // Xuefan
+
     public static bool GetRod = false;
     public static bool ThrownBall = false;
     public static bool HaveFish = false; // fish bites the hook
+    public static bool FishArrive = false;
     public static bool PickFish = false;
     public static bool GiveFish = false;
 
