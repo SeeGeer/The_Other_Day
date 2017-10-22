@@ -6,16 +6,19 @@ public class Database : MonoBehaviour
 {
     public static Database _instance;
 
-
-
+    // Sijie
     public static bool[] WheelSet = { false, false, false, false, false, false, false, false };
     public static int Count = 0;
     public static bool isRunning = false;
-
-
+    // Sijie
 
     public static bool GetRod = false;
     public static bool ThrownBall = false;
+    public static bool HaveFish = false; // fish bites the hook
+    public static bool PickFish = false;
+    public static bool GiveFish = false;
+
+    public static int FishCount = 0;
 
 
 }
