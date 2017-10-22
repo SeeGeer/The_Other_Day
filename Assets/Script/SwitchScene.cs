@@ -16,7 +16,7 @@ public class SwitchScene : MonoBehaviour {
 
             Flash.SetActive(true);
             StartCoroutine(StartCountDown());
-            Flash.SetActive(true);
+            //Flash.SetActive(true);
 
 
             Initiate.Fade(scene, loadToColor, 0.1f);

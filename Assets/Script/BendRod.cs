@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BendRod : MonoBehaviour {
     float TriggerTime;
-
+    
 
 
     MegaBend BendScript;
@@ -22,7 +22,7 @@ public class BendRod : MonoBehaviour {
         //ovr_SetControllerVibration(Hmd, ovrControllerType_LTouch, freq, trigger);
         if (Database.ThrownBall)
         {
-            if(BendScript.angle < 20)
+            if(BendScript.angle < 20)//default
             {
                 BendScript.angle += 1;
 
@@ -31,20 +31,6 @@ public class BendRod : MonoBehaviour {
 
 
 
-
-        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) //right hand first finger
-        {
-            //Shoot();
-            OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
-            TriggerTime = Time.time;//record the time when you shoot
-        }
-        else
-        {
-            if (Time.time - TriggerTime > 0.05f)
-            { //vibrate for 0.05s, and then stop
-                OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-            }
-        }
 
     }
 

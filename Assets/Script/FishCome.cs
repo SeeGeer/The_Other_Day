@@ -19,7 +19,7 @@ public class FishCome : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Database.ThrownBall && !Database.FishArrive)
+        if (Database.HaveFish && !Database.FishArrive)
         {
             if (Database.isPull)
             {
