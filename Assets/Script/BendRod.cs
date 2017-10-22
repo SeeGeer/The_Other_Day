@@ -18,11 +18,11 @@ public class BendRod : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+        //OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
         //ovr_SetControllerVibration(Hmd, ovrControllerType_LTouch, freq, trigger);
         if (Database.ThrownBall)
         {
-            if(BendScript.angle < 40)
+            if(BendScript.angle < 20)
             {
                 BendScript.angle += 1;
 

@@ -53,20 +53,20 @@ public class DrawLine : MonoBehaviour
                     lineRenderer = (LineRenderer)LineRenderGameObject.GetComponent("LineRenderer");
 
 
-                    //lineRenderer.SetVertexCount(4);
+                 
                     lineRenderer.positionCount = 2;
                 }
-            
-            }
 
+            }
+            lineRenderer.SetPosition(0, v0);
+            lineRenderer.SetPosition(1, v1);
         }
 
         
         
 
 
-        lineRenderer.SetPosition(0, v0);
-        lineRenderer.SetPosition(1, v1);
+
 
 
 
