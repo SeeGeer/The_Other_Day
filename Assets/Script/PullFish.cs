@@ -5,12 +5,12 @@ using UnityEngine;
 public class PullFish : MonoBehaviour {
 
     public int fishNumber;
-    private float speed = 1.5f;
+    private float[] speed = new float[3] { 2.2f, 2.0f, 1.8f };
     public Transform hookPosition;
 
 	void Update ()
     {
-        float step = speed * Time.deltaTime;
+        float step = speed[Database.FishCount] * Time.deltaTime;
 		if ((fishNumber == Database.FishCount) && Database.HaveFish && !Database.FishArrive)
         {
             if (Database.isPull)

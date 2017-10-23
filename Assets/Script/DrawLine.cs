@@ -13,7 +13,6 @@ public class DrawLine : MonoBehaviour
     private void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.SetPosition(0, RodHead.transform.position);
     }
 
     private void Update()
@@ -44,13 +43,22 @@ public class DrawLine : MonoBehaviour
             
         }
         */
-
-        if (Database.ThrownBall && !Database.FishArrive)
+        if (Database.GetRod)
         {
-            lineRenderer.SetPosition(1, fishInWater[Database.FishCount].transform.position);
+            if (Database.ThrownBall && !Database.FishArrive)
+            {
+                lineRenderer.SetPosition(0, RodHead.transform.position);
+                lineRenderer.SetPosition(1, fishInWater[Database.FishCount].transform.position);
+            }
+            else
+            {
+                lineRenderer.SetPosition(0, RodHead.transform.position);
+                lineRenderer.SetPosition(1, Hook.transform.position);
+            }
         } else
         {
-            lineRenderer.SetPosition(1, Hook.transform.position);
+            lineRenderer.SetPosition(0, new Vector3(666f, 666f, 666f));
+            lineRenderer.SetPosition(1, new Vector3(666f, 666f, 666f));
         }
     }
 

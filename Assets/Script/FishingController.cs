@@ -16,7 +16,16 @@ public class FishingController : MonoBehaviour {
         }
         else if (Database.HaveFish && !Database.FishArrive)
         {
-            OVRInput.SetControllerVibration(1, 20, OVRInput.Controller.LTouch);
+
+            if(Database.FishCount != 2)
+            {
+                OVRInput.SetControllerVibration(1, 20, OVRInput.Controller.LTouch);
+            }
+
+            else
+            {
+                OVRInput.SetControllerVibration(1, 80, OVRInput.Controller.LTouch);
+            }
         }
         else if (Database.FishArrive && !Database.PickFish)
         {
@@ -31,9 +40,9 @@ public class FishingController : MonoBehaviour {
 
     public IEnumerator WaitingForFish(float Duration)
     {
+        hookObject.SetActive(false);
         Database.WaitForFish = true;
         yield return new WaitForSeconds(Duration);
         Database.HaveFish = true;
-        hookObject.SetActive(false);
     }
 }
