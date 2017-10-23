@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class SwitchScene : MonoBehaviour {
 
-    public string scene;
-    public Color loadToColor = Color.black;
+    //public string scene;
+    //public Color loadToColor = Color.black;
     public GameObject Flash;
-    public float FlashTime = 0.1f;
+    public float FlashTime = 0.5f;
+    public GameObject SunSet;
+    public GameObject Morning;
+    public GameObject CameraInHand;
+
 
     private void OnGUI()
     {
-        if(GUI.Button(new Rect(0,0,100,30), "Start"))
+        if(Database.SwitchScene && !Database.InSunSet)
         {
 
             Flash.SetActive(true);
             StartCoroutine(StartCountDown());
             //Flash.SetActive(true);
 
-
-            Initiate.Fade(scene, loadToColor, 0.1f);
+            Database.SwitchScene = false;
+            Database.InSunSet = true;
         }
     }
 
@@ -29,6 +33,9 @@ public class SwitchScene : MonoBehaviour {
         yield return new WaitForSeconds(FlashTime);
         Flash.SetActive(false);
 
+        SunSet.SetActive(true);
+        Morning.SetActive(false);
+        CameraInHand.SetActive(false);
     }
 
 

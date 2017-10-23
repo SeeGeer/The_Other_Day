@@ -17,6 +17,7 @@ public class GiveFishToPapa : MonoBehaviour {
         {
             GetComponent<Renderer>().material.color = Color.cyan;
             GameObject.FindWithTag("BigFishInHand").SetActive(false);
+            Database.CameraReady = true;
         }
     }
 

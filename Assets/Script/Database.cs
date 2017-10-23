@@ -20,4 +20,10 @@ public class Database : MonoBehaviour
 
     public static int FishCount = 0;
     public static int BigFish = 2;
+
+
+    public static bool CameraReady = false;
+    public static bool SwitchScene = false;
+    public static bool PickUpCamera = false;
+    public static bool InSunSet = false;
 }
