@@ -9,6 +9,8 @@ public class SwayCube : MonoBehaviour
     // public GameObject TargetPos;
     // bool Thrown = false;
 
+    public GameObject[] Par;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "LeftHand")
@@ -19,22 +21,11 @@ public class SwayCube : MonoBehaviour
                 {
                     // isThrown();//Throw the ball away
                     Database.ThrownBall = true;
+                    Par[Database.FishCount].SetActive(true);
                 }
             }
         }
     }
 
-    /*
-    void isThrown()
-    {
-        Thrown = true;
-        if(Database.FishCount < 2)
-            Instantiate(Mark, new Vector3(TargetPos.transform.localPosition.x, TargetPos.transform.localPosition.y,
-            TargetPos.transform.localPosition.z), Quaternion.identity);
 
-        if(Database.FishCount == 2)
-            Instantiate(BigFishMark, new Vector3(TargetPos.transform.localPosition.x, TargetPos.transform.localPosition.y,
-            TargetPos.transform.localPosition.z), Quaternion.identity);
-    }
-    */
 }

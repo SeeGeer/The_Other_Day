@@ -26,4 +26,5 @@ public class Database : MonoBehaviour
     public static bool SwitchScene = false;
     public static bool PickUpCamera = false;
     public static bool InSunSet = false;
+    //public static bool ChangeSkybox = false;
 }
