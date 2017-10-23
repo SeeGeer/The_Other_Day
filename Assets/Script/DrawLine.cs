@@ -6,10 +6,17 @@ public class DrawLine : MonoBehaviour
 {
     public GameObject RodHead;
     public GameObject Hook;
+    public GameObject[] fishInWater;
 
     private LineRenderer lineRenderer;
 
-    void Update()
+    private void Start()
+    {
+        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.SetPosition(0, RodHead.transform.position);
+    }
+
+    private void Update()
     {
         /*
         //在游戏更新中去设置点  
@@ -37,9 +44,14 @@ public class DrawLine : MonoBehaviour
             
         }
         */
-        lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.SetPosition(0, RodHead.transform.position);
-        lineRenderer.SetPosition(1, Hook.transform.position);
+
+        if (Database.ThrownBall && !Database.FishArrive)
+        {
+            lineRenderer.SetPosition(1, fishInWater[Database.FishCount].transform.position);
+        } else
+        {
+            lineRenderer.SetPosition(1, Hook.transform.position);
+        }
     }
 
 }
