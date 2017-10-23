@@ -5,13 +5,15 @@ using UnityEngine;
 public class PullFish : MonoBehaviour {
 
     public int fishNumber;
-    private float[] speed = new float[3] { 2.2f, 2.0f, 1.8f };
+    private float[] speed = new float[3] { 3.0f, 2.5f, 2.5f };
+    private float[] escapeSpeed = new float[3] { 2.0f, 2.5f, 3.0f };
     public Transform hookPosition;
 
 	void Update ()
     {
         float step = speed[Database.FishCount] * Time.deltaTime;
-		if ((fishNumber == Database.FishCount) && Database.HaveFish && !Database.FishArrive)
+        float escapeStep = escapeSpeed[Database.FishCount] * Time.deltaTime;
+        if ((fishNumber == Database.FishCount) && Database.HaveFish && !Database.FishArrive)
         {
             if (Database.isPull)
             {
@@ -22,6 +24,11 @@ public class PullFish : MonoBehaviour {
                     Database.FishArrive = true;
                     // STAGE CHANGE HERE!!!
                 }
+            } else
+            {
+                Vector3 newPos = gameObject.transform.position;
+                newPos.y -= escapeStep;
+                gameObject.transform.position = newPos;
             }
         }
     }
