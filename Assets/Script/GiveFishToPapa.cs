@@ -4,41 +4,29 @@ using UnityEngine;
 
 public class GiveFishToPapa : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "SmallFishInHand")
+        if (other.tag == "SmallFishInHand")
         {
             GetComponent<Renderer>().material.color = Color.yellow;
-            GameObject.Find("SmallFishInHand").SetActive(false);
+            GameObject.FindWithTag("SmallFishInHand").SetActive(false);
+            Database.FishCount++;
             ResetAll();
-
         }
-
-
-
+        if (other.tag == "BigFishInHand")
+        {
+            GetComponent<Renderer>().material.color = Color.cyan;
+            GameObject.FindWithTag("BigFishInHand").SetActive(false);
+        }
     }
-
 
     void ResetAll()
     {
-   
-        Database.isPull = false;
         Database.ThrownBall = false;
         Database.WaitForFish = false;
         Database.HaveFish = false; // fish bites the hook
         Database.FishArrive = false;
         Database.PickFish = false;
         Database.GiveFish = false;
-}
+    }
 }

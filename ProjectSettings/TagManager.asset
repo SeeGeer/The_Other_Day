@@ -9,6 +9,11 @@ TagManager:
   - CheckPoint0
   - CheckPoint1
   - CheckPoint2
+  - SmallFish
+  - SmallFishInHand
+  - BigFish
+  - BigFishInHand
+  - LeftHand
   layers:
   - Default
   - TransparentFX

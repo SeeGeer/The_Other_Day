@@ -26,8 +26,8 @@ public class HookScript : MonoBehaviour {
             if (Database.isPull)
             {
                 gameObject.transform.position = Vector3.MoveTowards
-                    (gameObject.transform.position, hookPositionObject.transform.position, getSpeed);
-                if (gameObject.transform.position.x - hookPositionObject.transform.position.x < 0.01f)
+                    (gameObject.transform.position, hookPositionObject.transform.position, getStep);
+                if (Vector3.Distance(gameObject.transform.position, hookPositionObject.transform.position) < 0.01f)
                 {
                     Database.FishArrive = true;
                     // STAGE CHANGE HERE!!!
