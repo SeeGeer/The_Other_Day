@@ -9,7 +9,7 @@ public class CameraSnapshot : MonoBehaviour
     [SerializeField]
     Camera securityCamera; // drag the security camera onto this field in the inspector
 
-    public GameObject Photo;
+    int photoCount = 0;
 
     void LateUpdate()
     {
@@ -43,19 +43,14 @@ public class CameraSnapshot : MonoBehaviour
         byte[] bytes = cameraImage.EncodeToPNG();
 
         // save the encoded image to a file
-        //System.IO.File.WriteAllBytes(Application.persistentDataPath + "/camera_image.png", bytes);
+        System.IO.File.WriteAllBytes(Application.persistentDataPath + "/C.png", bytes);
+
+
+        WWW wwww = new WWW(Application.persistentDataPath + "/C.png");
+        GameObject.Find("Photo_1").GetComponent<Renderer>().material.mainTexture = wwww.texture;
+
+
     }
 
 
-private void Update()
-    {
-        //print(Application.persistentDataPath);
-        WWW www = new WWW(Application.persistentDataPath + "/camera_image.png");
-        print(Application.persistentDataPath);
-
-        //GameObject.Instantiate(photo, new Vector3(0, 0, photoCount), Quaternion.identity);
-        
-
-        this.GetComponent<Renderer>().material.mainTexture = www.texture;
-    }
 }
