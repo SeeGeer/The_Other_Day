@@ -34,8 +34,7 @@ public class RodHeadScript : MonoBehaviour {
             gameObject.transform.localPosition = Vector3.MoveTowards
                    (gameObject.transform.localPosition, nextPosition, step);
         }
-        else if (Database.PickFish)
-        {
+        else {
             gameObject.transform.localPosition = Vector3.MoveTowards
                    (gameObject.transform.localPosition, originalPosition.localPosition, step);
         }

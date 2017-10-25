@@ -25,8 +25,17 @@ public class PickCamera : MonoBehaviour {
         {
             if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
             {
-                print("IN");
-                Database.SwitchScene = true;
+                
+                if (Database.FacingFather)
+                {
+                    Database.SwitchScene = true;
+                }
+
+                if (!Database.FacingFather)//Not facing Father
+                {
+                    Database.TakenPic = true;
+                    Database.TakePhotoNotSwitchScene = true;//Just take photo
+                }
             }
         }
         

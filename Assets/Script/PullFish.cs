@@ -5,9 +5,11 @@ using UnityEngine;
 public class PullFish : MonoBehaviour {
 
     public int fishNumber;
-    private float[] speed = new float[3] { 3.0f, 2.5f, 2.5f };
-    private float[] escapeSpeed = new float[3] { 2.0f, 2.5f, 3.0f };
+    private float[] speed = new float[4] { 2.0f, 1.8f, 1.5f, 2.0f };
+    private float[] escapeSpeed = new float[4] { 2.0f, 2.2f, 3.0f, 1.5f };
     public Transform hookPosition;
+    public AudioSource fishAudio;
+    private bool isPlay = false;
 
 	void Update ()
     {
@@ -27,9 +29,23 @@ public class PullFish : MonoBehaviour {
             } else
             {
                 Vector3 newPos = gameObject.transform.position;
-                newPos.y -= escapeStep;
+                if (newPos.y > -1.2)
+                {
+                    newPos.y -= escapeStep;
+                    newPos.z += (escapeStep / 2);
+                }
                 gameObject.transform.position = newPos;
             }
+        }
+
+        if ((gameObject.transform.position.y > -1.0) && !isPlay)
+        {
+            fishAudio.Play();
+            isPlay = true;
+        } else if ((gameObject.transform.position.y <= -1.0) && isPlay)
+        {
+            fishAudio.Stop();
+            isPlay = false;
         }
     }
 }

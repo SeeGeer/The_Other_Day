@@ -7,15 +7,7 @@ public class PickUp : MonoBehaviour {
 
     public GameObject Rod;
     public GameObject OriginalRod;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,7 +17,8 @@ public class PickUp : MonoBehaviour {
             print("GetRod");
             Database.GetRod = true;
             Rod.SetActive(true);
-            Destroy(OriginalRod, 0.1f);
+            OriginalRod.SetActive(false);
+            //Destroy(OriginalRod, 0.1f);
 
         }
     }

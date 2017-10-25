@@ -22,9 +22,13 @@ public class Database : MonoBehaviour
     public static int BigFish = 2;
 
 
-    public static bool CameraReady = false;
+    public static bool CameraReady = true;
     public static bool SwitchScene = false;
+    public static bool TakePhotoNotSwitchScene = false;
     public static bool PickUpCamera = false;
     public static bool InSunSet = false;
+    public static bool FacingFather = false;
+
+    public static bool TakenPic = false;
     //public static bool ChangeSkybox = false;
 }

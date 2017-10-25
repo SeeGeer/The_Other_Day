@@ -33,11 +33,10 @@ public class BendRod : MonoBehaviour {
             {
                 BendScript.angle += 1;
             }
-        } else if (Database.PickFish)
-        {
+        } else {
             if (BendScript.angle > 0)
             {
-                BendScript.angle -= 1;
+                BendScript.angle -= 5;
             }
         }
     }

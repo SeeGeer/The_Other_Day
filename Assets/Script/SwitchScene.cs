@@ -11,22 +11,39 @@ public class SwitchScene : MonoBehaviour {
     public GameObject SunSet;
     public GameObject Morning;
     public GameObject CameraInHand;
-
+    public GameObject Father;
+    public GameObject FishingRod;
+    public GameObject OriginalRod;
 
     private void OnGUI()
     {
-        if(Database.SwitchScene && !Database.InSunSet)
+        //if (Database.SwitchScene && !Database.InSunSet && Database.FacingFather)
+        if (Database.SwitchScene && !Database.InSunSet)
         {
-
             Flash.SetActive(true);
             StartCoroutine(StartCountDown());
-            //Flash.SetActive(true);
 
             Database.SwitchScene = false;
             Database.InSunSet = true;
+            Destroy(Father, 0.1f);
+            FishingRod.SetActive(false);
+            OriginalRod.SetActive(true);
+            Database.FishCount++;
+            ResetAll();
+        }
+
+        if (Database.TakePhotoNotSwitchScene && !Database.InSunSet)//Just take pic for fun
+        {
+
+            if (Database.TakenPic)
+            {
+                Flash.SetActive(true);
+                StartCoroutine(StartCountDownNotSwitch());
+                Database.TakenPic = false; // finish taking pic
+                // StartCoroutine(RestartCamera());
+            }
         }
     }
-
 
     public IEnumerator StartCountDown()
     {
@@ -36,6 +53,25 @@ public class SwitchScene : MonoBehaviour {
         SunSet.SetActive(true);
         Morning.SetActive(false);
         CameraInHand.SetActive(false);
+    }
+
+
+    public IEnumerator StartCountDownNotSwitch()
+    {
+        yield return new WaitForSeconds(FlashTime);
+        Flash.SetActive(false);
+
+    }
+
+    void ResetAll()
+    {
+        Database.GetRod = false;
+        Database.ThrownBall = false;
+        Database.WaitForFish = false;
+        Database.HaveFish = false; // fish bites the hook
+        Database.FishArrive = false;
+        Database.PickFish = false;
+        Database.GiveFish = false;
     }
 
 

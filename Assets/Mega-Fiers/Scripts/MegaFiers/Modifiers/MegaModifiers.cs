@@ -608,17 +608,28 @@ public class MegaModifiers : MonoBehaviour
 
 		return mod;
 	}
-
-	public MegaModifier Add(string type)
+    
+/*	public MegaModifier Add(string type)
 	{
-		MegaModifier mod = (MegaModifier)UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(gameObject, "Assets/Mega-Fiers/Scripts/MegaFiers/Modifiers/MegaModifiers.cs (614,36)", type);
+        // original syntax
+        
+        		MegaModifier mod = (MegaModifier)UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(gameObject, 
+                    "Assets/Mega-Fiers/Scripts/MegaFiers/Modifiers" +
+                    "/MegaModifiers.cs (614,36)", type);
+   
+        
+        // our syntax
+        //Type typeToUse = Type.GetType("Assets/Mega-Fiers/Scripts/MegaFiers/Modifiers/MegaModifiers.cs (614,36)");
+        //MegaModifier mod = gameObject.AddComponent<typeToUse>();
 
-		if ( mod != null )
+
+
+        if ( mod != null )
 			BuildList();
 
 		return mod;
 	}
-
+*/
 	public static MegaModifiers Get(GameObject go)
 	{
 		MegaModifiers mod = (MegaModifiers)go.GetComponent<MegaModifiers>();

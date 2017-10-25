@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FishingController : MonoBehaviour {
-    public float[] FishWatingTime = { 1.0f, 2.0f, 3.0f};
+    public float[] FishWatingTime = { 1.0f, 2.0f, 3.0f, 3.0f};
 
     public GameObject hookObject;
     public GameObject[] fishInWater;
@@ -16,19 +16,11 @@ public class FishingController : MonoBehaviour {
         }
         else if (Database.HaveFish && !Database.FishArrive)
         {
-
-            if(Database.FishCount != 2)
-            {
-                OVRInput.SetControllerVibration(1, 20, OVRInput.Controller.LTouch);
-            }
-
-            else
-            {
-                OVRInput.SetControllerVibration(1, 80, OVRInput.Controller.LTouch);
-            }
+            OVRInput.SetControllerVibration(1, 20, OVRInput.Controller.LTouch);
         }
         else if (Database.FishArrive && !Database.PickFish)
         {
+            OVRInput.SetControllerVibration(1, 20, OVRInput.Controller.LTouch);
             fishInWater[Database.FishCount].SetActive(false);
         }
         else if (Database.PickFish)

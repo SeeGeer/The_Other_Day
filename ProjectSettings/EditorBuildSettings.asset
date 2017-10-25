@@ -8,6 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Sijie.unity
     guid: fa878a2da718d0a4e870e40da153f931
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Sijie_End.unity
     guid: d818906f68be9124fab635d349fbca34

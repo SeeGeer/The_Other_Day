@@ -17,6 +17,7 @@ TagManager:
   - Camera
   - CameraInHand
   - RightHand
+  - Looking
   layers:
   - Default
   - TransparentFX
