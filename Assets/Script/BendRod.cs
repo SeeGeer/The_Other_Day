@@ -25,11 +25,19 @@ public class BendRod : MonoBehaviour {
         } else if (Database.HaveFish && !Database.PickFish)
         {
             int nextAngle = 30; // small fish
-            if (Database.FishCount == Database.BigFish)
+            if (Database.FishCount == Database.BigFish || Database.FishCount == Database.FailedFish)
             {
                 nextAngle = 50; // big fish
             }
-            if (BendScript.angle < nextAngle)
+            
+            if (Database.FishCount == Database.FailedFish && Database.FishArrive)
+            {
+                // failed fish situation 
+                if (BendScript.angle > 0)
+                {
+                    BendScript.angle -= 5;
+                }
+            } else if (BendScript.angle < nextAngle)
             {
                 BendScript.angle += 1;
             }

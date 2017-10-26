@@ -11,7 +11,7 @@ public class HookPositionScript : MonoBehaviour {
     void Update()
     {
         hookPosition = rodHead.transform.position;
-        hookPosition.y -= 0.7f;
+        hookPosition.y -= 1.5f;
         gameObject.transform.position = hookPosition;
     }
 }

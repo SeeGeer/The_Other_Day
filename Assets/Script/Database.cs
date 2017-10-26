@@ -19,7 +19,9 @@ public class Database : MonoBehaviour
     public static bool GiveFish = false;
 
     public static int FishCount = 0;
-    public static int BigFish = 2;
+    public static int FailedFish = 2;
+    public static int BigFish = 3;
+    public static int EndFish = 4;
 
 
     public static bool CameraReady = true;

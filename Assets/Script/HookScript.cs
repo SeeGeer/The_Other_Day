@@ -10,14 +10,16 @@ public class HookScript : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         gameObject.transform.position = hookPositionObject.transform.position;
-
-        if (Database.FishArrive && !Database.PickFish)
+        if (Database.FishCount != Database.FailedFish)
         {
-            fishWaitForPick[Database.FishCount].SetActive(true);
-        } else if (Database.PickFish)
-        {
-            fishWaitForPick[Database.FishCount].SetActive(false);
+            if (Database.FishArrive && !Database.PickFish)
+            {
+                fishWaitForPick[Database.FishCount].SetActive(true);
+            }
+            else if (Database.PickFish)
+            {
+                fishWaitForPick[Database.FishCount].SetActive(false);
+            }
         }
-
     }
 }

@@ -12,7 +12,7 @@ public class PickFish : MonoBehaviour {
     {
         if (other.tag == "SmallFish")
         {
-
+            /*
             if (Database.InSunSet)
             {
                 FishInSunset.SetActive(true);
@@ -21,9 +21,11 @@ public class PickFish : MonoBehaviour {
             }
             else{
                 FishInHand.SetActive(true);
-                Database.PickFish = true;
-                
+                Database.PickFish = true; 
             }
+            */
+            FishInHand.SetActive(true);
+            Database.PickFish = true;
         }
         if (other.tag == "BigFish")
         {
