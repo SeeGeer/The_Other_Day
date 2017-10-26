@@ -60,7 +60,6 @@ public class SwitchScene : MonoBehaviour {
     {
         yield return new WaitForSeconds(FlashTime);
         Flash.SetActive(false);
-
     }
 
     void ResetAll()

@@ -22,17 +22,25 @@ public class RodHeadScript : MonoBehaviour {
         }
         else if (Database.HaveFish && !Database.PickFish)
         {
-            // small fish
-            Vector3 nextPosition = smallFishPosition.localPosition;
-
-            if (Database.FishCount == Database.BigFish)
+            if (Database.FishCount == Database.FailedFish && Database.FishArrive)
             {
-                // big fish
-                nextPosition = bigFishPosition.localPosition;
-            }
+                // failed fish situation 
+                gameObject.transform.localPosition = Vector3.MoveTowards
+                   (gameObject.transform.localPosition, originalPosition.localPosition, step);
+            } else
+            {
+                // small fish
+                Vector3 nextPosition = smallFishPosition.localPosition;
 
-            gameObject.transform.localPosition = Vector3.MoveTowards
-                   (gameObject.transform.localPosition, nextPosition, step);
+                if (Database.FishCount == Database.BigFish)
+                {
+                    // big fish
+                    nextPosition = bigFishPosition.localPosition;
+                }
+
+                gameObject.transform.localPosition = Vector3.MoveTowards
+                       (gameObject.transform.localPosition, nextPosition, step);
+            }
         }
         else {
             gameObject.transform.localPosition = Vector3.MoveTowards
