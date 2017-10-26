@@ -14,12 +14,17 @@ public class SwitchScene : MonoBehaviour {
     public GameObject Father;
     public GameObject FishingRod;
     public GameObject OriginalRod;
+    public GameObject PapaPhoto;
+    public GameObject BackOfPhoto;
+
+
 
     private void OnGUI()
     {
         //if (Database.SwitchScene && !Database.InSunSet && Database.FacingFather)
         if (Database.SwitchScene && !Database.InSunSet)
         {
+            
             Flash.SetActive(true);
             StartCoroutine(StartCountDown());
 
@@ -50,6 +55,8 @@ public class SwitchScene : MonoBehaviour {
         yield return new WaitForSeconds(FlashTime);
         Flash.SetActive(false);
 
+        PapaPhoto.GetComponent<MeshRenderer>().enabled = true;
+        BackOfPhoto.GetComponent<MeshRenderer>().enabled = true;
         SunSet.SetActive(true);
         Morning.SetActive(false);
         CameraInHand.SetActive(false);

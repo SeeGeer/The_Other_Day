@@ -14,9 +14,9 @@ public class CameraSnapshot : MonoBehaviour
     void LateUpdate()
     {
 
-        if (Input.GetKeyDown("s"))
+        if (!Database.InSunSet && OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
         {
-            print("S");
+            //print("S");
             StartCoroutine(SaveCameraView());
         }
 

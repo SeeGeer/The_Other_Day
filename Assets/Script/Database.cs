@@ -30,5 +30,6 @@ public class Database : MonoBehaviour
     public static bool FacingFather = false;
 
     public static bool TakenPic = false;
+    public static bool clickCamera = false;
     //public static bool ChangeSkybox = false;
 }
