@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FishingController : MonoBehaviour {
-    public float[] FishWatingTime = { 3.0f, 3.0f, 3.0f, 3.0f, 3.0f};
+    private float[] FishWatingTime = {3.0f, 3.0f, 3.0f, 3.0f, 3.0f};
 
     public GameObject hookObject;
     public GameObject[] fishInWater;
@@ -14,11 +14,14 @@ public class FishingController : MonoBehaviour {
     void Update () {
         if (Database.ThrownBall && !Database.WaitForFish)
         {
-            StartCoroutine(WaitingForFish(FishWatingTime[Database.FishCount]));
+            hookObject.SetActive(false);
             if (Database.FishCount == Database.EndFish)
             {
                 Credit.SetActive(true);
-            } 
+            } else
+            {
+                StartCoroutine(WaitingForFish(FishWatingTime[Database.FishCount]));
+            }
         }
         else if (Database.FishCount != Database.EndFish)
         {
@@ -46,9 +49,9 @@ public class FishingController : MonoBehaviour {
         }
 	}
 
-    public IEnumerator WaitingForFish(float Duration)
+    private IEnumerator WaitingForFish(float Duration)
     {
-        hookObject.SetActive(false);
+        
         Database.WaitForFish = true;
         yield return new WaitForSeconds(Duration);
         Database.HaveFish = true;

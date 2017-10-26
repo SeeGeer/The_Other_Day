@@ -5,6 +5,7 @@ using UnityEngine;
 public class FailedFish : MonoBehaviour {
     private float speed = 1.5f;
     private float escapeSpeed = 2.0f;
+    public GameObject hookObject;
 
 	void Update () {
         float step = speed * Time.deltaTime;
@@ -21,7 +22,7 @@ public class FailedFish : MonoBehaviour {
                 {
                     Database.FishArrive = true;
                     // STAGE CHANGE HERE!!!
-                    StarCouroutine
+                    StartCoroutine(WaitForFather());
                 }
                 gameObject.transform.position = newPos;
             }
@@ -34,14 +35,25 @@ public class FailedFish : MonoBehaviour {
                 }
                 gameObject.transform.position = newPos;
             }
-        }
-
-        
+        }      
     }
 
     IEnumerator WaitForFather()
     {
         yield return new WaitForSeconds(5.0f);
         Database.PickFish = true;
+        hookObject.SetActive(true);
+        Database.FishCount++;
+        ResetAll();
+    }
+
+    void ResetAll()
+    {
+        Database.ThrownBall = false;
+        Database.WaitForFish = false;
+        Database.HaveFish = false; // fish bites the hook
+        Database.FishArrive = false;
+        Database.PickFish = false;
+        Database.GiveFish = false;
     }
 }

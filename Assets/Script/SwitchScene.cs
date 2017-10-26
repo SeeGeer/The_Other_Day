@@ -31,8 +31,8 @@ public class SwitchScene : MonoBehaviour {
             Database.SwitchScene = false;
             Database.InSunSet = true;
             Destroy(Father, 0.1f);
-            FishingRod.SetActive(false);
-            OriginalRod.SetActive(true);
+            StartCoroutine(DelayDisable());
+           
             Database.FishCount++;
             ResetAll();
         }
@@ -60,6 +60,13 @@ public class SwitchScene : MonoBehaviour {
         SunSet.SetActive(true);
         Morning.SetActive(false);
         CameraInHand.SetActive(false);
+    }
+
+    private IEnumerator DelayDisable()
+    {
+        yield return new WaitForSeconds(0.1f);
+        FishingRod.SetActive(false);
+        OriginalRod.SetActive(true);
     }
 
 

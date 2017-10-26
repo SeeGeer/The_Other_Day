@@ -31,8 +31,7 @@ public class RodHeadScript : MonoBehaviour {
             {
                 // small fish
                 Vector3 nextPosition = smallFishPosition.localPosition;
-
-                if (Database.FishCount == Database.BigFish)
+                if (Database.FishCount == Database.BigFish || Database.FishCount == Database.FailedFish)
                 {
                     // big fish
                     nextPosition = bigFishPosition.localPosition;
