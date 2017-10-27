@@ -19,7 +19,7 @@ public class SwitchScene : MonoBehaviour {
     public GameObject BoatBroken;
     public GameObject Boat;
     public GameObject WhiteBoard;
-
+    public GameObject PhotoHome;
 
     private void OnGUI()
     {
@@ -40,6 +40,7 @@ public class SwitchScene : MonoBehaviour {
             Database.FishCount++;
             BoatBroken.SetActive(true);
             Boat.SetActive(false);
+            PhotoHome.GetComponent<Collider>().enabled = true;
             ResetAll();
         }
 

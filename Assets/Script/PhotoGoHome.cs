@@ -5,8 +5,9 @@ using UnityEngine;
 public class PhotoGoHome : MonoBehaviour {
 
     public GameObject PhotoAtHome;
-	// Use this for initialization
-	void Start () {
+    public GameObject PhotoInHand;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -18,9 +19,10 @@ public class PhotoGoHome : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "photo")
+        if(other.tag == "Photo")
         {
             PhotoAtHome.SetActive(true);
+            PhotoInHand.SetActive(false);
         }
     }
 }

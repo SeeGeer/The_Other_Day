@@ -15,7 +15,7 @@ public class FailedFish : MonoBehaviour {
             if (Database.isPull)
             {
                 Vector3 newPos = gameObject.transform.position;
-                if (newPos.z > 3.0f)
+                if (newPos.z > 4.5f)
                 {
                     newPos.z -= step;
                 } else

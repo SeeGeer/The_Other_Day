@@ -6,9 +6,9 @@ public class ReleaseFish : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "ChildFishInhand")
+        if (other.tag == "ChildFishInHand")
         { 
-            GameObject.FindWithTag("ChildFishInhand").SetActive(false);
+            GameObject.FindWithTag("ChildFishInHand").SetActive(false);
             Database.FishCount++;
             ResetAll();
         }

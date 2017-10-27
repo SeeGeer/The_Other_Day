@@ -36,8 +36,8 @@ public class DrawLine : MonoBehaviour
             }
         } else
         {
-            lineRenderer.SetPosition(0, new Vector3(666f, 666f, 666f));
-            lineRenderer.SetPosition(1, new Vector3(666f, 666f, 666f));
+            lineRenderer.SetPosition(0, new Vector3(0f, 0f, 0f));
+            lineRenderer.SetPosition(1, new Vector3(0f, 0f, 0f));
         }
     }
 
