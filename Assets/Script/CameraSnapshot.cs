@@ -48,7 +48,7 @@ public class CameraSnapshot : MonoBehaviour
 
         WWW wwww = new WWW(Application.persistentDataPath + "/C.png");
         GameObject.Find("Photo_1").GetComponent<Renderer>().material.mainTexture = wwww.texture;
-        GameObject.Find("Photo_2").GetComponent<Renderer>().material.mainTexture = wwww.texture;
+        //GameObject.Find("Photo_2").GetComponent<Renderer>().material.mainTexture = wwww.texture;
 
     }
 

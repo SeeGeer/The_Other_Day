@@ -40,7 +40,7 @@ public class SwitchScene : MonoBehaviour {
             Database.FishCount++;
             BoatBroken.SetActive(true);
             Boat.SetActive(false);
-            PhotoHome.GetComponent<Collider>().enabled = true;
+            PhotoHome.SetActive(true);
             ResetAll();
         }
 
