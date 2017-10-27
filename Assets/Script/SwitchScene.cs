@@ -16,7 +16,9 @@ public class SwitchScene : MonoBehaviour {
     public GameObject OriginalRod;
     public GameObject PapaPhoto;
     public GameObject BackOfPhoto;
-
+    public GameObject BoatBroken;
+    public GameObject Boat;
+    public GameObject WhiteBoard;
 
 
     private void OnGUI()
@@ -27,6 +29,8 @@ public class SwitchScene : MonoBehaviour {
             
             Flash.SetActive(true);
             StartCoroutine(StartCountDown());
+            Database.StartWhiteFade = true;
+            WhiteBoard.SetActive(true);
 
             Database.SwitchScene = false;
             Database.InSunSet = true;
@@ -34,6 +38,8 @@ public class SwitchScene : MonoBehaviour {
             StartCoroutine(DelayDisable());
            
             Database.FishCount++;
+            BoatBroken.SetActive(true);
+            Boat.SetActive(false);
             ResetAll();
         }
 
