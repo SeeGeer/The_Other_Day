@@ -18,6 +18,8 @@ public class Database : MonoBehaviour
     public static bool PickFish = false;
     public static bool GiveFish = false;
 
+    public static bool GiveBigFishToPapa = false;
+
     public static int FishCount = 0;
     public static int FailedFish = 3;
     public static int BigFish = 4;

@@ -20,6 +20,10 @@ public class SwitchScene : MonoBehaviour {
     public GameObject Boat;
     public GameObject WhiteBoard;
     public GameObject PhotoHome;
+    public AudioSource FirstBGM;
+    public AudioSource SecondBGM;
+    public float secondBGMWaitTime = 5.0f;
+
 
 
     private void OnGUI()
@@ -37,6 +41,9 @@ public class SwitchScene : MonoBehaviour {
             Database.InSunSet = true;
             Destroy(Father, 0.1f);
             StartCoroutine(DelayDisable());
+
+            FirstBGM.Stop();
+            StartCoroutine(DelayPlaySecondBGM());
            
             Database.FishCount++;
             BoatBroken.SetActive(true);
@@ -93,6 +100,12 @@ public class SwitchScene : MonoBehaviour {
         Database.FishArrive = false;
         Database.PickFish = false;
         Database.GiveFish = false;
+    }
+
+    private IEnumerator DelayPlaySecondBGM()
+    {
+        yield return new WaitForSeconds(secondBGMWaitTime);
+        SecondBGM.Play();
     }
 
 

@@ -40,8 +40,9 @@ public class FishingController : MonoBehaviour {
                 }
                 
             }
-            else if (Database.PickFish)
+            else if (Database.PickFish && !Database.GiveBigFishToPapa)
             {
+                OVRInput.SetControllerVibration(1, 20, OVRInput.Controller.RTouch);
                 OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
                 hookObject.SetActive(true);
             }

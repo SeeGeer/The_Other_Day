@@ -11,12 +11,15 @@ public class GiveFishToPapa : MonoBehaviour {
             GetComponent<Renderer>().material.color = Color.yellow;
             GameObject.FindWithTag("SmallFishInHand").SetActive(false);
             Database.FishCount++;
+            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
             ResetAll();
         }
         if (other.tag == "BigFishInHand")
         {
             GetComponent<Renderer>().material.color = Color.cyan;
             GameObject.FindWithTag("BigFishInHand").SetActive(false);
+            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+            Database.GiveBigFishToPapa = true;
             Database.CameraReady = true;
         }
     }

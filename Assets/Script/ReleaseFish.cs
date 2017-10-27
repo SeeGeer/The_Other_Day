@@ -10,6 +10,7 @@ public class ReleaseFish : MonoBehaviour {
         { 
             GameObject.FindWithTag("ChildFishInHand").SetActive(false);
             Database.FishCount++;
+            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
             ResetAll();
         }
     }

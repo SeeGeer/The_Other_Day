@@ -23,7 +23,7 @@ public class PhotoGoHome : MonoBehaviour {
     {
         if (Database.InSunSet)
         {
-            print(other.name);
+            //print(other.name);
             if(other.name == "Photo_1")
             {
 

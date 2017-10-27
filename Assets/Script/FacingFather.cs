@@ -29,7 +29,7 @@ public class FacingFather : MonoBehaviour {
         if (other.tag == "Looking")
         {
             Database.FacingFather = false;
-            print("FacingFather False");
+            //print("FacingFather False");
         }
 
     }
