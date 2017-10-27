@@ -18,6 +18,8 @@ TagManager:
   - CameraInHand
   - RightHand
   - Looking
+  - ChildFishInHand
+  - ChildFish
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickFish : MonoBehaviour {
     public GameObject FishInHand;
     public GameObject BigFishInHand;
+    public GameObject ChildFishInHand;
     public GameObject FishInSunset;
     public GameObject Credit;
 
@@ -32,7 +33,10 @@ public class PickFish : MonoBehaviour {
             BigFishInHand.SetActive(true);
             Database.PickFish = true;
         }
-
-
+        if (other.tag == "ChildFish")
+        {
+            ChildFishInHand.SetActive(true);
+            Database.PickFish = true;
+        }
     }
 }

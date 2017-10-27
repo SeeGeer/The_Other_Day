@@ -5,8 +5,8 @@ using UnityEngine;
 public class PullFish : MonoBehaviour {
 
     public int fishNumber;
-    private float[] speed = new float[4] { 2.0f, 1.8f, 0.0f, 1.5f };
-    private float[] escapeSpeed = new float[4] { 2.0f, 2.2f, 0.0f, 3.0f };
+    private float[] speed = new float[5] { 2.0f, 1.8f, 2.2f, 0.0f, 1.5f };
+    private float[] escapeSpeed = new float[5] { 2.0f, 2.2f, 1.5f, 0.0f, 3.0f };
     public Transform hookPosition;
     public AudioSource fishAudio;
     private bool isPlay = false;
