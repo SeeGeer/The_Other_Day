@@ -8,6 +8,9 @@ public class FishingToolPull : MonoBehaviour {
     private bool[] isCheckPointClear = new bool[3] { false, false, false };
     private float waitingTime = 0.5f;
 
+    public AudioSource reelSound;
+    private bool isPlay = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "CheckPoint0")
@@ -77,6 +80,7 @@ public class FishingToolPull : MonoBehaviour {
 
     private void Update()
     {
+        /*
         for (int i = 0; i < 3; i++)
         {
             if (isCheckPointClear[i])
@@ -87,6 +91,16 @@ public class FishingToolPull : MonoBehaviour {
             {
                 checkPoint[i].GetComponent<Renderer>().material.color = Color.yellow;
             }
+        }
+        */
+        if (Database.isPull && !isPlay)
+        {
+            reelSound.Play();
+            isPlay = true;
+        } else if (!Database.isPull && isPlay)
+        {
+            reelSound.Stop();
+            isPlay = false;
         }
     }
 }

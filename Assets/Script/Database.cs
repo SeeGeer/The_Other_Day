@@ -24,7 +24,7 @@ public class Database : MonoBehaviour
     public static int EndFish = 5;
 
 
-    public static bool CameraReady = true;
+    public static bool CameraReady = false;
     public static bool SwitchScene = false;
     public static bool TakePhotoNotSwitchScene = false;
     public static bool PickUpCamera = false;
