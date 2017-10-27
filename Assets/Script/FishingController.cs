@@ -8,8 +8,6 @@ public class FishingController : MonoBehaviour {
     public GameObject hookObject;
     public GameObject[] fishInWater;
 
-    public GameObject Credit;
-
     // Update is called once per frame
     void Update () {
         if (Database.ThrownBall && !Database.WaitForFish)
@@ -17,8 +15,6 @@ public class FishingController : MonoBehaviour {
             hookObject.SetActive(false);
             if (Database.FishCount == Database.EndFish)
             {
-                Credit.SetActive(true);// Already cast the last time
-
                 Database.StartToFade = true;
 
             } else

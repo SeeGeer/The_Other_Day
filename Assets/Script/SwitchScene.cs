@@ -21,6 +21,7 @@ public class SwitchScene : MonoBehaviour {
     public GameObject WhiteBoard;
     public GameObject PhotoHome;
 
+
     private void OnGUI()
     {
         //if (Database.SwitchScene && !Database.InSunSet && Database.FacingFather)
