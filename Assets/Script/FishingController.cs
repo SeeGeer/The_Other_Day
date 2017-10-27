@@ -17,7 +17,10 @@ public class FishingController : MonoBehaviour {
             hookObject.SetActive(false);
             if (Database.FishCount == Database.EndFish)
             {
-                Credit.SetActive(true);
+                Credit.SetActive(true);// Already cast the last time
+
+                Database.StartToFade = true;
+
             } else
             {
                 StartCoroutine(WaitingForFish(FishWatingTime[Database.FishCount]));

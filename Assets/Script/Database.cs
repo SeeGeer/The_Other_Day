@@ -33,5 +33,8 @@ public class Database : MonoBehaviour
 
     public static bool TakenPic = false;
     public static bool clickCamera = false;
+
+    public static bool StartToFade = false;
+    public static bool StartWhiteFade = false;
     //public static bool ChangeSkybox = false;
 }
