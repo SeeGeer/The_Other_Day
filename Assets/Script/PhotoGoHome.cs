@@ -6,7 +6,7 @@ public class PhotoGoHome : MonoBehaviour {
 
     public GameObject PhotoAtHome;
     public GameObject PhotoBackAtHome;
-
+    public GameObject FuturePhotoFilter;
     public GameObject PhotoInHand;
     // Use this for initialization
     void Start () {
@@ -32,7 +32,7 @@ public class PhotoGoHome : MonoBehaviour {
                 PhotoAtHome.GetComponent<MeshRenderer>().enabled = true;
                 PhotoBackAtHome.GetComponent<MeshRenderer>().enabled = true;
                 GameObject.Find("Photo_2").GetComponent<Renderer>().material.mainTexture = wwww.texture;
-
+                FuturePhotoFilter.GetComponent<MeshRenderer>().enabled = true;
                 PhotoInHand.SetActive(false);
             }
 

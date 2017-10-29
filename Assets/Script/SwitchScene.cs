@@ -15,8 +15,12 @@ public class SwitchScene : MonoBehaviour {
     public GameObject FishingRod;
     public GameObject OriginalRod;
     public GameObject PapaPhoto;
+    public GameObject PapaPhotoFilter;
+    //public GameObject FuturePapaPhotoFilter;
+
     public GameObject BackOfPhoto;
     public GameObject BoatBroken;
+    
     public GameObject Boat;
     public GameObject WhiteBoard;
     public GameObject PhotoHome;
@@ -25,6 +29,24 @@ public class SwitchScene : MonoBehaviour {
     public float secondBGMWaitTime = 5.0f;
 
 
+
+    public GameObject peddleBroken_1;
+    public GameObject peddleBroken_2;
+    public GameObject peddle_1;
+    public GameObject peddle_2;
+
+    public GameObject StoolBroken_1;
+    public GameObject StoolBroken_2;
+    public GameObject Stool_1;
+    public GameObject Stool_2;
+
+    public GameObject LifeSaverBroken_1;
+    public GameObject LifeSaverBroken_2;
+    public GameObject LifeSaver_1;
+    public GameObject LifeSaver_2;
+
+    public GameObject Bucket;
+    public GameObject BucketBroken;
 
     private void OnGUI()
     {
@@ -46,9 +68,7 @@ public class SwitchScene : MonoBehaviour {
             StartCoroutine(DelayPlaySecondBGM());
            
             Database.FishCount++;
-            BoatBroken.SetActive(true);
-            Boat.SetActive(false);
-            PhotoHome.SetActive(true);
+            
             ResetAll();
         }
 
@@ -71,6 +91,7 @@ public class SwitchScene : MonoBehaviour {
         Flash.SetActive(false);
 
         PapaPhoto.GetComponent<MeshRenderer>().enabled = true;
+        PapaPhotoFilter.GetComponent<MeshRenderer>().enabled = true;
         BackOfPhoto.GetComponent<MeshRenderer>().enabled = true;
         SunSet.SetActive(true);
         Morning.SetActive(false);
@@ -82,6 +103,29 @@ public class SwitchScene : MonoBehaviour {
         yield return new WaitForSeconds(0.1f);
         FishingRod.SetActive(false);
         OriginalRod.SetActive(true);
+        BoatBroken.SetActive(true);
+
+        peddle_1.SetActive(false);
+        peddle_2.SetActive(false);
+        peddleBroken_1.SetActive(true);
+        peddleBroken_2.SetActive(true);
+
+        Stool_1.SetActive(false);
+        Stool_2.SetActive(false);
+        StoolBroken_1.SetActive(true);
+        StoolBroken_2.SetActive(true);
+
+        LifeSaver_1.SetActive(false);
+        LifeSaver_2.SetActive(false);
+        LifeSaverBroken_1.SetActive(true);
+        LifeSaverBroken_2.SetActive(true);
+
+
+        Bucket.SetActive(false);
+        BucketBroken.SetActive(true);
+
+        Boat.SetActive(false);
+        PhotoHome.SetActive(true);
     }
 
 
