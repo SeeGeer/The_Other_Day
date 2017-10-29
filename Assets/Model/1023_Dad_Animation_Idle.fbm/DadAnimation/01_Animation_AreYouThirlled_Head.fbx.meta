@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: a36ff46de581f744bb1c1010c222b70b
+timeCreated: 1509215558
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Dad_Head
+    100004: Dad_Hips
+    100006: Dad_HipsTranslation
+    100008: Dad_LeftShoulder
+    100010: Dad_Neck
+    100012: Dad_Reference
+    100014: Dad_RightShoulder
+    100016: Dad_Spine
+    100018: Dad_Spine1
+    100020: Dad_Spine2
+    100022: Eyebrows
+    100024: Eyes1
+    100026: Hat
+    100028: Head
+    100030: L_Cheek
+    100032: L_Cheekbone
+    100034: L_Eye_Downleft
+    100036: L_Eye_Downright
+    100038: L_Eye_Inner
+    100040: L_Eye_Outer
+    100042: L_Eye_Upleft
+    100044: L_Eye_Upright
+    100046: L_Eyebrow_Left
+    100048: L_Eyebrow_Middle
+    100050: L_Eyebrow_Right
+    100052: L_Mustache_left
+    100054: L_Mustache_middle
+    100056: LeftEye
+    100058: Mustache
+    100060: Mustache_middle
+    100062: Nose
+    100064: R_Cheek
+    100066: R_Cheekbone
+    100068: R_Eye_Downleft
+    100070: R_Eye_Downright
+    100072: R_Eye_Inner
+    100074: R_Eye_Outer
+    100076: R_Eye_Upleft
+    100078: R_Eye_Upright
+    100080: R_Eyebrow_Left
+    100082: R_Eyebrow_Middle
+    100084: R_Eyebrow_Right
+    100086: R_Mustache_left
+    100088: R_Mustache_middle
+    100090: RightEye
+    100092: transform1
+    400000: //RootNode
+    400002: Dad_Head
+    400004: Dad_Hips
+    400006: Dad_HipsTranslation
+    400008: Dad_LeftShoulder
+    400010: Dad_Neck
+    400012: Dad_Reference
+    400014: Dad_RightShoulder
+    400016: Dad_Spine
+    400018: Dad_Spine1
+    400020: Dad_Spine2
+    400022: Eyebrows
+    400024: Eyes1
+    400026: Hat
+    400028: Head
+    400030: L_Cheek
+    400032: L_Cheekbone
+    400034: L_Eye_Downleft
+    400036: L_Eye_Downright
+    400038: L_Eye_Inner
+    400040: L_Eye_Outer
+    400042: L_Eye_Upleft
+    400044: L_Eye_Upright
+    400046: L_Eyebrow_Left
+    400048: L_Eyebrow_Middle
+    400050: L_Eyebrow_Right
+    400052: L_Mustache_left
+    400054: L_Mustache_middle
+    400056: LeftEye
+    400058: Mustache
+    400060: Mustache_middle
+    400062: Nose
+    400064: R_Cheek
+    400066: R_Cheekbone
+    400068: R_Eye_Downleft
+    400070: R_Eye_Downright
+    400072: R_Eye_Inner
+    400074: R_Eye_Outer
+    400076: R_Eye_Upleft
+    400078: R_Eye_Upright
+    400080: R_Eyebrow_Left
+    400082: R_Eyebrow_Middle
+    400084: R_Eyebrow_Right
+    400086: R_Mustache_left
+    400088: R_Mustache_middle
+    400090: RightEye
+    400092: transform1
+    2300000: Hat
+    2300002: LeftEye
+    2300004: RightEye
+    3300000: Hat
+    3300002: LeftEye
+    3300004: RightEye
+    4300000: Head
+    4300002: Mustache
+    4300004: Eyebrows
+    4300006: Hat
+    4300008: LeftEye
+    4300010: RightEye
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Eyebrows
+    13700002: Head
+    13700004: Mustache
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyebrowsTexture
+    second: {fileID: 2100000, guid: 3e70199805a07c94c804ccc6f0d1e556, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyesTexute_Blinn1
+    second: {fileID: 2100000, guid: 794e5d06192c1144fb0b878ed4f97308, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HeadSkinTextue
+    second: {fileID: 2100000, guid: c4a3929ff50a6d24096b6fb1286bad36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MustacheTextue
+    second: {fileID: 2100000, guid: 67273abc0f6d9494dbde584526e1c6d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert18
+    second: {fileID: 2100000, guid: 519d503cc640a514d8121e5cc66c34a9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

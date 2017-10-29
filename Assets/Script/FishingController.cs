@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FishingController : MonoBehaviour {
-    private float[] FishWatingTime = {3.0f, 3.0f, 3.0f, 3.0f, 3.0f};
+    public float[] FishWatingTime = {3.0f, 3.0f, 3.0f, 3.0f, 3.0f, 0.0f};
 
     public GameObject hookObject;
     public GameObject[] fishInWater;

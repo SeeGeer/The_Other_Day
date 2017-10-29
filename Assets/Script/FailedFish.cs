@@ -40,7 +40,7 @@ public class FailedFish : MonoBehaviour {
 
     IEnumerator WaitForFather()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(9.0f);
         Database.PickFish = true;
         hookObject.SetActive(true);
         Database.FishCount++;

@@ -94,8 +94,8 @@ public class OvrAvatarRenderComponent : MonoBehaviour {
         {
             throw new Exception("No shader provided for avatar material.");
         }
-        Material mat = new Material(shader);
-        mat.name = name;
+        Material mat = (Material)Resources.Load("LeftHandMaterial", typeof(Material));
+        mat.name = "LeftHandMaterial";
         return mat;
     }
 

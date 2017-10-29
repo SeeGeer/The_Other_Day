@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: e94a1bfaab3aa584f80516b731d90b20
+timeCreated: 1509215570
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: _____________EndPoint
+    100004: _____________EndPoint 1
+    100006: _____________EndPoint 2
+    100008: _____________EndPoint 3
+    100010: _____________EndPoint 4
+    100012: _____________EndPoint 5
+    100014: _____________EndPoint 6
+    100016: _____________EndPoint 7
+    100018: _____________EndPoint 8
+    100020: _____________EndPoint 9
+    100022: Arms
+    100024: Boots
+    100026: Dad_Head
+    100028: Dad_Hips
+    100030: Dad_HipsTranslation
+    100032: Dad_LeftArm
+    100034: Dad_LeftFoot
+    100036: Dad_LeftForeArm
+    100038: Dad_LeftHand
+    100040: Dad_LeftLeg
+    100042: Dad_LeftShoulder
+    100044: Dad_LeftToeBase
+    100046: Dad_LeftUpLeg
+    100048: Dad_Neck
+    100050: Dad_Reference
+    100052: Dad_RightArm
+    100054: Dad_RightFoot
+    100056: Dad_RightForeArm
+    100058: Dad_RightHand
+    100060: Dad_RightLeg
+    100062: Dad_RightShoulder
+    100064: Dad_RightToeBase
+    100066: Dad_RightUpLeg
+    100068: Dad_Spine
+    100070: Dad_Spine1
+    100072: Dad_Spine2
+    100074: L_Cheek
+    100076: L_Index
+    100078: L_Index_Joint
+    100080: L_Middle
+    100082: L_Middle_Joint
+    100084: L_Palm
+    100086: L_Pincky
+    100088: L_Pincky_Joint
+    100090: L_Ring
+    100092: L_Ring_Joint
+    100094: L_Thumb
+    100096: L_Thumb_Joint
+    100098: Pants
+    100100: R_Cheek
+    100102: R_Index
+    100104: R_Index_Joint
+    100106: R_Middle
+    100108: R_Middle_Joint
+    100110: R_Palm
+    100112: R_Pincky
+    100114: R_Pincky_Joint
+    100116: R_Ring
+    100118: R_Ring_Joint
+    100120: R_Thumb
+    100122: R_Thumb_Joint
+    100124: Shirt
+    400000: //RootNode
+    400002: _____________EndPoint
+    400004: _____________EndPoint 1
+    400006: _____________EndPoint 2
+    400008: _____________EndPoint 3
+    400010: _____________EndPoint 4
+    400012: _____________EndPoint 5
+    400014: _____________EndPoint 6
+    400016: _____________EndPoint 7
+    400018: _____________EndPoint 8
+    400020: _____________EndPoint 9
+    400022: Arms
+    400024: Boots
+    400026: Dad_Head
+    400028: Dad_Hips
+    400030: Dad_HipsTranslation
+    400032: Dad_LeftArm
+    400034: Dad_LeftFoot
+    400036: Dad_LeftForeArm
+    400038: Dad_LeftHand
+    400040: Dad_LeftLeg
+    400042: Dad_LeftShoulder
+    400044: Dad_LeftToeBase
+    400046: Dad_LeftUpLeg
+    400048: Dad_Neck
+    400050: Dad_Reference
+    400052: Dad_RightArm
+    400054: Dad_RightFoot
+    400056: Dad_RightForeArm
+    400058: Dad_RightHand
+    400060: Dad_RightLeg
+    400062: Dad_RightShoulder
+    400064: Dad_RightToeBase
+    400066: Dad_RightUpLeg
+    400068: Dad_Spine
+    400070: Dad_Spine1
+    400072: Dad_Spine2
+    400074: L_Cheek
+    400076: L_Index
+    400078: L_Index_Joint
+    400080: L_Middle
+    400082: L_Middle_Joint
+    400084: L_Palm
+    400086: L_Pincky
+    400088: L_Pincky_Joint
+    400090: L_Ring
+    400092: L_Ring_Joint
+    400094: L_Thumb
+    400096: L_Thumb_Joint
+    400098: Pants
+    400100: R_Cheek
+    400102: R_Index
+    400104: R_Index_Joint
+    400106: R_Middle
+    400108: R_Middle_Joint
+    400110: R_Palm
+    400112: R_Pincky
+    400114: R_Pincky_Joint
+    400116: R_Ring
+    400118: R_Ring_Joint
+    400120: R_Thumb
+    400122: R_Thumb_Joint
+    400124: Shirt
+    4300000: Arms
+    4300002: Boots
+    4300004: Shirt
+    4300006: Pants
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Arms
+    13700002: Boots
+    13700004: Pants
+    13700006: Shirt
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ArmSkinTexture
+    second: {fileID: 2100000, guid: 5ca28365fa4c0cc4cb2c455c99e276a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boots_PhongE
+    second: {fileID: 2100000, guid: 6eeb9eda08a2bad46a8e15988142229d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PantsTexture
+    second: {fileID: 2100000, guid: 25eca903edf950f4a9aafd9cd799c1dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VestTexture
+    second: {fileID: 2100000, guid: 9521bda03d0e06b4fb20e0d132ca3ab4, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
