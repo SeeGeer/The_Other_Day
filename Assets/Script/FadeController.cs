@@ -8,6 +8,8 @@ public class FadeController : MonoBehaviour
     float alpha = 0;
     public float speed = 1.0f;
     public float waitFade = 3.0f;
+    public GameObject Hands;
+    public GameObject ambiantSound;
 
 
     // Update is called once per frame
@@ -16,7 +18,7 @@ public class FadeController : MonoBehaviour
         if (Database.StartToFade)
         {
             StartCoroutine(DelayFadeOut());
-
+            
         }
     }
 
@@ -24,11 +26,8 @@ public class FadeController : MonoBehaviour
     {
         yield return new WaitForSeconds(waitFade);
         StartCoroutine(FadeOut());
+
     }
-
-
-
-
 
     private IEnumerator FadeOut()
     {
@@ -39,10 +38,26 @@ public class FadeController : MonoBehaviour
         {
             alpha += 0.01f * speed;
         }
+        else
+        {
+            Hands.SetActive(false);
+            ambiantSound.SetActive(false);
+
+            StartCoroutine(DelayPlayVideo());
+            
+
+
+
+        }
 
         GetComponent<Renderer>().material.color = c;
         //c = Color.Lerp(guiTexture.color, Color.clear, fadeSpeed * Time.deltaTime);
     }
 
 
+    IEnumerator DelayPlayVideo()
+    {
+        yield return new WaitForSeconds(3.0f);
+        GameObject.Find("CenterEyeAnchor").GetComponent<UnityEngine.Video.VideoPlayer>().Play();
+    }
 }

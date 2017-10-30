@@ -6,6 +6,7 @@ public class FailedFish : MonoBehaviour {
     private float speed = 1.5f;
     private float escapeSpeed = 2.0f;
     public GameObject hookObject;
+    public AudioSource fishGoneSound;
 
 	void Update () {
         float step = speed * Time.deltaTime;
@@ -21,6 +22,7 @@ public class FailedFish : MonoBehaviour {
                 } else
                 {
                     Database.FishArrive = true;
+                    fishGoneSound.Play();
                     // STAGE CHANGE HERE!!!
                     StartCoroutine(WaitForFather());
                 }

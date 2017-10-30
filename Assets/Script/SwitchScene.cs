@@ -24,11 +24,12 @@ public class SwitchScene : MonoBehaviour {
     public GameObject Boat;
     public GameObject WhiteBoard;
     public GameObject PhotoHome;
-    public AudioSource FirstBGM;
+    public AudioSource transitionSound;
+    public AudioSource first_perc;
+    public AudioSource first_bigfish;
+    public AudioSource first_default;
     public AudioSource SecondBGM;
-    public float secondBGMWaitTime = 5.0f;
-
-
+    public float secondBGMWaitTime = 15.0f;
 
     public GameObject peddleBroken_1;
     public GameObject peddleBroken_2;
@@ -53,22 +54,23 @@ public class SwitchScene : MonoBehaviour {
         //if (Database.SwitchScene && !Database.InSunSet && Database.FacingFather)
         if (Database.SwitchScene && !Database.InSunSet)
         {
-            
+            transitionSound.Play();
+            first_bigfish.Stop();
+            first_default.Stop();
+            first_perc.Stop();
             Flash.SetActive(true);
             StartCoroutine(StartCountDown());
-            Database.StartWhiteFade = true;
+            
             WhiteBoard.SetActive(true);
 
             Database.SwitchScene = false;
             Database.InSunSet = true;
             Destroy(Father, 0.1f);
             StartCoroutine(DelayDisable());
-
-            FirstBGM.Stop();
+            StartCoroutine(DelayWhiteFadeOut());
             StartCoroutine(DelayPlaySecondBGM());
            
             Database.FishCount++;
-            
             ResetAll();
         }
 
@@ -151,6 +153,13 @@ public class SwitchScene : MonoBehaviour {
         yield return new WaitForSeconds(secondBGMWaitTime);
         SecondBGM.Play();
     }
+
+    private IEnumerator DelayWhiteFadeOut()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Database.StartWhiteFade = true;
+    }
+    
 
 
 }

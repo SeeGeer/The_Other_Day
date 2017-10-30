@@ -27,11 +27,13 @@ public class DialogueController : MonoBehaviour {
     private bool flag17 = false;
     private bool flag18 = false;
     private bool flag19 = false;
+    private bool flag20 = false;
+
 
     // Update is called once per frame
     void Update () {
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && !Database.startGame)
         {
             Database.startGame = true;
             PlayDialogue(0);
@@ -130,6 +132,11 @@ public class DialogueController : MonoBehaviour {
                 flag19 = true;
                 StartCoroutine(DelayPlayed19());
             }
+            if (Database.PickUpCamera && !flag20)
+            {
+                flag20 = true;
+                StartCoroutine(DelayPlayed20());
+            }
 
         }
         
@@ -141,7 +148,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(1);
         bodyAnimator.SetBool("01_StartTheGame", true);
         headAnimator.SetBool("01_StartTheGame", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("01_StartTheGame", false);
         headAnimator.SetBool("01_StartTheGame", false);
     }
@@ -152,7 +159,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(2);
         bodyAnimator.SetBool("03_CastRod", true);
         headAnimator.SetBool("03_CastRod", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("03_CastRod", false);
         headAnimator.SetBool("03_CastRod", false);
     }
@@ -174,7 +181,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(4);
         bodyAnimator.SetBool("04_Reeling", true);
         headAnimator.SetBool("04_Reeling", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("04_Reeling", false);
         headAnimator.SetBool("04_Reeling", false);
     }
@@ -185,7 +192,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(5);
         bodyAnimator.SetBool("05_GoodJob", true);
         headAnimator.SetBool("05_GoodJob", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("05_GoodJob", false);
         headAnimator.SetBool("05_GoodJob", false);
     }
@@ -194,7 +201,7 @@ public class DialogueController : MonoBehaviour {
     {
         bodyAnimator.SetBool("07_PutFishToBucket", true);
         headAnimator.SetBool("07_PutFishToBucket", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("07_PutFishToBucket", false);
         headAnimator.SetBool("07_PutFishToBucket", false);
         yield return new WaitForSeconds(2.0f);
@@ -218,7 +225,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(8);
         bodyAnimator.SetBool("06_GiveMeFish", true);
         headAnimator.SetBool("06_GiveMeFish", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("06_GiveMeFish", false);
         headAnimator.SetBool("06_GiveMeFish", false);
     }
@@ -229,7 +236,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(9);
         bodyAnimator.SetBool("07_PutFishToBucket", true);
         headAnimator.SetBool("07_PutFishToBucket", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("07_PutFishToBucket", false);
         headAnimator.SetBool("07_PutFishToBucket", false);
     }
@@ -262,9 +269,12 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(12);
         bodyAnimator.SetBool("09_LittleFish", true);
         headAnimator.SetBool("09_LittleFish", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("09_LittleFish", false);
         headAnimator.SetBool("09_LittleFish", false);
+        yield return new WaitForSeconds(dialogues[12].length);
+        yield return new WaitForSeconds(1.0f);
+        PlayDialogue(20);
     }
 
     IEnumerator DelayPlayed13()
@@ -284,7 +294,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(14);
         bodyAnimator.SetBool("10_BigFish", true);
         headAnimator.SetBool("10_BigFish", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("10_BigFish", false);
         headAnimator.SetBool("10_BigFish", false);
     }
@@ -317,7 +327,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(17);
         bodyAnimator.SetBool("10_BigFish", true);
         headAnimator.SetBool("10_BigFish", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("10_BigFish", false);
         headAnimator.SetBool("10_BigFish", false);
     }
@@ -328,7 +338,7 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(18);
         bodyAnimator.SetBool("11_LookAtTheFish", true);
         headAnimator.SetBool("11_LookAtTheFish", true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         bodyAnimator.SetBool("11_LookAtTheFish", false);
         headAnimator.SetBool("11_LookAtTheFish", false);
     }
@@ -339,6 +349,19 @@ public class DialogueController : MonoBehaviour {
         PlayDialogue(19);
         bodyAnimator.SetBool("12_GrabTheFishForPhoto", true);
         headAnimator.SetBool("12_GrabTheFishForPhoto", true);
+        yield return new WaitForSeconds(0.1f);
+        bodyAnimator.SetBool("12_GrabTheFishForPhoto", false);
+        headAnimator.SetBool("12_GrabTheFishForPhoto", false);
+    }
+
+    IEnumerator DelayPlayed20()
+    {
+        yield return new WaitForSeconds(1.0f);
+        bodyAnimator.SetBool("13_TakePhoto", true);
+        headAnimator.SetBool("13_TakePhoto", true);
+        yield return new WaitForSeconds(0.1f);
+        bodyAnimator.SetBool("13_TakePhoto", false);
+        headAnimator.SetBool("13_TakePhoto", false);
     }
 
 

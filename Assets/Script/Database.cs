@@ -23,13 +23,13 @@ public class Database : MonoBehaviour
 
     public static bool GiveBigFishToPapa = false;
 
-    public static int FishCount = 0;
+    public static int FishCount = 4;
     public static int FailedFish = 3;
     public static int BigFish = 4;
     public static int EndFish = 5;
 
 
-    public static bool CameraReady = false;
+    public static bool CameraReady = true;
     public static bool SwitchScene = false;
     public static bool TakePhotoNotSwitchScene = false;
     public static bool PickUpCamera = false;
@@ -43,7 +43,7 @@ public class Database : MonoBehaviour
     public static bool StartWhiteFade = false;
     //public static bool ChangeSkybox = false;
 
-
+    public static bool StartPlay = false;
 
     //Dialogue control
 

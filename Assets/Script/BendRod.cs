@@ -5,6 +5,8 @@ using UnityEngine;
 public class BendRod : MonoBehaviour {
     float TriggerTime;
     MegaBend BendScript;
+    private bool isBendSoundPlay = false;
+    public AudioSource bendSound;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,11 @@ public class BendRod : MonoBehaviour {
             }
         } else if (Database.HaveFish && !Database.PickFish)
         {
+            if (!isBendSoundPlay)
+            {
+                bendSound.Play();
+                isBendSoundPlay = true;
+            }
             int nextAngle = 30; // small fish
             if (Database.FishCount == Database.BigFish || Database.FishCount == Database.FailedFish)
             {
@@ -46,6 +53,7 @@ public class BendRod : MonoBehaviour {
             {
                 BendScript.angle -= 5;
             }
+            isBendSoundPlay = false;
         }
     }
 }

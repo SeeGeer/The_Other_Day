@@ -10,6 +10,7 @@ public class SwayCube : MonoBehaviour
     // bool Thrown = false;
 
     public GameObject[] Par;
+    public AudioSource swaySound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +22,7 @@ public class SwayCube : MonoBehaviour
                 {
                     // isThrown();//Throw the ball away
                     Database.ThrownBall = true;
+                    swaySound.Play();
                     Par[Database.FishCount].SetActive(true);
                 }
             }

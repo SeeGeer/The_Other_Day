@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ReleaseFish : MonoBehaviour {
 
+    public AudioSource smallFishGo;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "ChildFishInHand")
@@ -11,6 +13,7 @@ public class ReleaseFish : MonoBehaviour {
             GameObject.FindWithTag("ChildFishInHand").SetActive(false);
             Database.FishCount++;
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+            smallFishGo.Play();
             ResetAll();
         }
     }
@@ -19,7 +22,7 @@ public class ReleaseFish : MonoBehaviour {
     {
         Database.ThrownBall = false;
         Database.WaitForFish = false;
-        Database.HaveFish = false; // fish bites the hook
+        Database.HaveFish = false;  // fish bites the hook
         Database.FishArrive = false;
         Database.PickFish = false;
         Database.GiveFish = false;

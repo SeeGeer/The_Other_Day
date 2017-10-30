@@ -20,7 +20,7 @@ public class WhiteFadeController : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         Color c = GetComponent<Renderer>().material.color;
         c.a = alpha;
         if(alpha > 0.0f)
