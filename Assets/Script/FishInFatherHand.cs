@@ -6,6 +6,7 @@ public class FishInFatherHand : MonoBehaviour {
 
     public AudioSource fatherFishSound;
     public GameObject smallFishInFatherHand;
+    public GameObject bigFishInFatherHand;
     private bool putFishFlag = false;
 
 	void Update () {
@@ -15,6 +16,10 @@ public class FishInFatherHand : MonoBehaviour {
             {
                 smallFishInFatherHand.SetActive(true);
                 StartCoroutine(DelayDisableFish());
+                putFishFlag = true;
+            } else if ((Database.FishCount == 4) && !putFishFlag)
+            {
+                bigFishInFatherHand.SetActive(true);
                 putFishFlag = true;
             }
         }

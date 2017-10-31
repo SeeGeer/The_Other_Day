@@ -14,6 +14,7 @@ public class ReleaseFish : MonoBehaviour {
             Database.FishCount++;
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
             smallFishGo.Play();
+            Database.ReleaseFish = true;
             ResetAll();
         }
     }

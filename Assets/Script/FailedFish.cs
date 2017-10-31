@@ -7,8 +7,10 @@ public class FailedFish : MonoBehaviour {
     private float escapeSpeed = 2.0f;
     public GameObject hookObject;
     public AudioSource fishGoneSound;
+    public AudioSource restartSound;
+    public AudioSource stringBreaksSound;
 
-	void Update () {
+    void Update () {
         float step = speed * Time.deltaTime;
         float escapeStep = escapeSpeed * Time.deltaTime;
         if ((Database.FishCount == Database.FailedFish) && Database.HaveFish && !Database.FishArrive)
@@ -23,6 +25,7 @@ public class FailedFish : MonoBehaviour {
                 {
                     Database.FishArrive = true;
                     fishGoneSound.Play();
+                    stringBreaksSound.Play();
                     // STAGE CHANGE HERE!!!
                     StartCoroutine(WaitForFather());
                 }
@@ -45,6 +48,7 @@ public class FailedFish : MonoBehaviour {
         yield return new WaitForSeconds(9.0f);
         Database.PickFish = true;
         hookObject.SetActive(true);
+        restartSound.Play();
         Database.FishCount++;
         ResetAll();
     }

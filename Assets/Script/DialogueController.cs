@@ -97,7 +97,7 @@ public class DialogueController : MonoBehaviour {
                 flag12 = true;
                 StartCoroutine(DelayPlayed12());
             }
-            if (Database.FishCount == 3 && Database.ThrownBall && !flag13)
+            if (Database.FishCount == 3 && Database.ReleaseFish && !flag13)
             {
                 flag13 = true;
                 StartCoroutine(DelayPlayed13());
@@ -166,7 +166,7 @@ public class DialogueController : MonoBehaviour {
 
     IEnumerator DelayPlayed3()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         PlayDialogue(3);
         bodyAnimator.SetBool("08_TalkingWithoutLooking", true);
         headAnimator.SetBool("08_TalkingWithoutLooking", true);
@@ -210,7 +210,7 @@ public class DialogueController : MonoBehaviour {
 
     IEnumerator DelayPlayed7()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(7.0f);
         PlayDialogue(7);
         bodyAnimator.SetBool("08_TalkingWithoutLooking", true);
         headAnimator.SetBool("08_TalkingWithoutLooking", true);
@@ -243,7 +243,7 @@ public class DialogueController : MonoBehaviour {
 
     IEnumerator DelayPlayed10()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(15.0f);
         PlayDialogue(10);
         bodyAnimator.SetBool("08_TalkingWithoutLooking", true);
         headAnimator.SetBool("08_TalkingWithoutLooking", true);
@@ -279,7 +279,7 @@ public class DialogueController : MonoBehaviour {
 
     IEnumerator DelayPlayed13()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         PlayDialogue(13);
         bodyAnimator.SetBool("00_Talking", true);
         headAnimator.SetBool("00_Talking", true);
@@ -312,7 +312,7 @@ public class DialogueController : MonoBehaviour {
 
     IEnumerator DelayPlayed16()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         PlayDialogue(16);
         bodyAnimator.SetBool("08_TalkingWithoutLooking", true);
         headAnimator.SetBool("08_TalkingWithoutLooking", true);

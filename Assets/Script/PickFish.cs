@@ -7,35 +7,26 @@ public class PickFish : MonoBehaviour {
     public GameObject BigFishInHand;
     public GameObject ChildFishInHand;
     public GameObject FishInSunset;
-    public GameObject Credit;
+    public AudioSource successSound;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "SmallFish")
         {
-            /*
-            if (Database.InSunSet)
-            {
-                FishInSunset.SetActive(true);
-                Database.PickFish = true;
-                Credit.SetActive(true);
-            }
-            else{
-                FishInHand.SetActive(true);
-                Database.PickFish = true; 
-            }
-            */
             FishInHand.SetActive(true);
+            successSound.Play();
             Database.PickFish = true;
         }
         if (other.tag == "BigFish")
         {
             BigFishInHand.SetActive(true);
+            successSound.Play();
             Database.PickFish = true;
         }
         if (other.tag == "ChildFish")
         {
             ChildFishInHand.SetActive(true);
+            successSound.Play();
             Database.PickFish = true;
         }
     }

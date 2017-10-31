@@ -24,10 +24,8 @@ public class GiveFishToPapa : MonoBehaviour {
             GameObject.FindWithTag("BigFishInHand").SetActive(false);
             Database.GiveFish = true;
             Database.GiveBigFishToPapa = true;
-            
 
             StartCoroutine(DelayCameraAppear());
-
         }
     }
 

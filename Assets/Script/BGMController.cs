@@ -23,9 +23,7 @@ public class BGMController : MonoBehaviour {
                 if (!isBigFishPlay)
                 {
                     startTime = Time.time;
-                    StartCoroutine(ChangeBGM(bgm_default, bgm_bigfish));
-                    // bgm_default.volume = 0.0f;
-                    // bgm_bigfish.volume = 0.3f;
+                    StartCoroutine(ChangeBGMFromDefaultToBigFish());
                     isBigFishPlay = true;
                 }
             }
@@ -34,9 +32,7 @@ public class BGMController : MonoBehaviour {
                 if (!isBigFishPlay)
                 {
                     startTime = Time.time;
-                    StartCoroutine(ChangeBGM(bgm_default, bgm_bigfish));
-                    // bgm_default.volume = 0.0f;
-                    // bgm_bigfish.volume = 0.3f;
+                    StartCoroutine(ChangeBGMFromDefaultToBigFish());
                     isBigFishPlay = true;
                 }
             }
@@ -45,9 +41,7 @@ public class BGMController : MonoBehaviour {
                 if (isBigFishPlay)
                 {
                     startTime = Time.time;
-                    StartCoroutine(ChangeBGM(bgm_bigfish, bgm_default));
-                    // bgm_default.volume = 0.3f;
-                    // bgm_bigfish.volume = 0.0f;
+                    StartCoroutine(ChangeBGMFromBigFishToDefault());
                     isBigFishPlay = false;
                 }
             }
@@ -55,14 +49,26 @@ public class BGMController : MonoBehaviour {
 		
 	}
 
-    IEnumerator ChangeBGM(AudioSource from, AudioSource to)
+    IEnumerator ChangeBGMFromDefaultToBigFish()
     {
         float step = Time.deltaTime / 2;
-        while (from.volume > 0)
+        while (bgm_default.volume > 0)
         {
             currentTime = Time.time;
-            from.volume = Mathf.Lerp(0.1f, 0.0f, (currentTime - startTime) / duration);
-            to.volume = Mathf.Lerp(0.0f, 0.1f, (currentTime - startTime) / duration);
+            bgm_default.volume = Mathf.Lerp(0.1f, 0.0f, (currentTime - startTime) / duration);
+            bgm_bigfish.volume = Mathf.Lerp(0.0f, 0.1f, (currentTime - startTime) / duration);
+            yield return new WaitForSeconds(step);
+        }
+    }
+
+    IEnumerator ChangeBGMFromBigFishToDefault()
+    {
+        float step = Time.deltaTime / 2;
+        while (bgm_bigfish.volume > 0)
+        {
+            currentTime = Time.time;
+            bgm_bigfish.volume = Mathf.Lerp(0.1f, 0.0f, (currentTime - startTime) / duration);
+            bgm_default.volume = Mathf.Lerp(0.0f, 0.1f, (currentTime - startTime) / duration);
             yield return new WaitForSeconds(step);
         }
     }

@@ -43,11 +43,7 @@ public class FadeController : MonoBehaviour
             Hands.SetActive(false);
             ambiantSound.SetActive(false);
 
-            StartCoroutine(DelayPlayVideo());
-            
-
-
-
+            // StartCoroutine(DelayPlayVideo());
         }
 
         GetComponent<Renderer>().material.color = c;

@@ -29,7 +29,7 @@ public class SwitchScene : MonoBehaviour {
     public AudioSource first_bigfish;
     public AudioSource first_default;
     public AudioSource SecondBGM;
-    public float secondBGMWaitTime = 15.0f;
+    public float secondBGMWaitTime = 30.0f;
 
     public GameObject peddleBroken_1;
     public GameObject peddleBroken_2;
@@ -152,12 +152,19 @@ public class SwitchScene : MonoBehaviour {
     {
         yield return new WaitForSeconds(secondBGMWaitTime);
         SecondBGM.Play();
+        StartCoroutine(DelayPlayVideo());
     }
 
     private IEnumerator DelayWhiteFadeOut()
     {
         yield return new WaitForSeconds(2.0f);
         Database.StartWhiteFade = true;
+    }
+
+    private IEnumerator DelayPlayVideo()
+    {
+        yield return new WaitForSeconds(28.0f);
+        GameObject.Find("CenterEyeAnchor").GetComponent<UnityEngine.Video.VideoPlayer>().Play();
     }
     
 
